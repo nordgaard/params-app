@@ -1,38 +1,18 @@
 Rails.application.routes.draw do
 
-  # get "/caps_name", to: 'parameters#caps_name'
-  # get "/game/:user_guess", to: 'parameters#game'
-  # get '/url_segment/:best_friend', to:'parameters#url_segment'  #the key is established with /:message, this is called the wildcard, CAN BE PUT ANYWHERE IN THE URL 
-  # post '/form_result', to: 'parameters#form_result'
-  get '/longest', to: 'parameters#longest_word'
+  get 'name', to: 'params#name'
+  get 'number_game/:number', to: 'params#number_game'
+  get 'counter/:number', to: 'params#counter'
+  get '/form_display', to: 'params#form_display'
+  post '/form_result', to: 'params#form_result'
+
+  get 'url_segment/:student_1/:student_2', to: 'params#url_segment'
 
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
 
   # Example resource route with sub-resources:
   #   resources :products do
